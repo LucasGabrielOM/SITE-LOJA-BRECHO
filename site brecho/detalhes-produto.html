@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes - Produtos - Olli Brecho</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="logo">
+            <h1>Olli Brecho</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="carrinho.html">Carrinho</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Detalhes do Produto 1 -->
+    <section class="detalhes-produto">
+        <div class="detalhes-container">
+            <div class="produto-imagem">
+                <img src="Vestido-Vermelho-curto-frente.jpeg" alt="Vestido Elegante">
+            </div>
+            <div class="produto-info">
+                <h2>Vestido Elegante</h2>
+                <p class="preco">R$ 199,90</p>
+                <p class="descricao">
+                    Este vestido elegante é perfeito para ocasiões especiais. Feito com tecido de alta qualidade,
+                    ele oferece conforto e estilo em um único look.
+                </p>
+                <div class="tamanhos">
+                    <label for="tamanho">Tamanho:</label>
+                    <select id="tamanho" name="tamanho">
+                        <option value="P">P</option>
+                        <option value="M">M</option>
+                        <option value="G">G</option>
+                        <option value="GG">GG</option>
+                    </select>
+                </div>
+                <button class="btn-comprar" onclick="adicionarAoCarrinho('Vestido Elegante', '199.90', 'Vestido-Vermelho-curto-frente.jpeg')">
+                    Adicionar ao Carrinho
+                </button>
+                <button class="btn-comprar" onclick="comprarAgora()">Comprar Agora</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detalhes do Produto 2 -->
+    <section class="detalhes-produto">
+        <div class="detalhes-container">
+            <div class="produto-imagem">
+                <img src="Blusa Crop-Zara-Marrom-frente.jpeg" alt="Blusa Crop Zara Marrom">
+            </div>
+            <div class="produto-info">
+                <h2>Blusa Crop Zara Marrom</h2>
+                <p class="preco">R$ 199,90</p>
+                <p class="descricao">
+                    Esta blusa crop da Zara é ideal para looks casuais e modernos. Confortável e estilosa, perfeita para o dia a dia.
+                </p>
+                <div class="tamanhos">
+                    <label for="tamanho">Tamanho:</label>
+                    <select id="tamanho" name="tamanho">
+                        <option value="P">P</option>
+                        <option value="M">M</option>
+                        <option value="G">G</option>
+                        <option value="GG">GG</option>
+                    </select>
+                </div>
+                <button class="btn-comprar" onclick="adicionarAoCarrinho('Blusa Crop Zara Marrom', '199.90', 'Blusa-Crop-Zara-Marrom-frente.jpeg')">
+                    Adicionar ao Carrinho
+                </button>
+                <button class="btn-comprar" onclick="comprarAgora()">Comprar Agora</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2025 Moda Consciente. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

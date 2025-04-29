@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos - Olli Brecho</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <div class="logo">
+            <h1>Olli Brecho</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="carrinho.html">Carrinho (<span id="carrinho-contador">0</span>)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Seção de Produtos -->
+    <section class="produtos">
+        <h2>Nossos Produtos</h2> 
+        <div class="filtros">
+            <button class="filtro-btn ativo" data-categoria="todos">Todos</button>
+            <button class="filtro-btn" data-categoria="vestidos">Vestidos</button>
+            <button class="filtro-btn" data-categoria="blazers">Blazers</button>
+            <button class="filtro-btn" data-categoria="camisetas">Camisetas</button>
+        </div>
+        
+        <div class="produtos-container">
+            <div class="produto" data-categoria="vestidos">
+                <img src="laura.jpeg" alt="Vestido Elegante">
+                <h3>Vestido Elegante</h3>
+                <p>R$ 199,90</p>
+                <button onclick="adicionarAoCarrinho({ nome: 'Vestido Elegante', preco: 'R$ 199,90', imagem: 'laura.jpeg' })">Adicionar ao Carrinho</button>
+            </div>
+            <div class="produto" data-categoria="blazers">
+                <img src="laura.jpeg" alt="Blazer Moderno">
+                <h3>Blazer Moderno</h3>
+                <p>R$ 299,90</p>
+                <button onclick="adicionarAoCarrinho({ nome: 'Blazer Moderno', preco: 'R$ 299,90', imagem: 'laura.jpeg' })">Adicionar ao Carrinho</button>
+            </div>
+            <div class="produto" data-categoria="camisetas">
+                <img src="laura.jpeg" alt="Camiseta Básica">
+                <h3>Camiseta Básica</h3>
+                <p>R$ 79,90</p>
+                <button onclick="adicionarAoCarrinho({ nome: 'Camiseta Básica', preco: 'R$ 79,90', imagem: 'laura.jpeg' })">Adicionar ao Carrinho</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2025 Moda Consciente. Todos os direitos reservados.</p>
+    </footer>
+    
+    <script src="scripts.js"></script>
+</body>
+</html>
+
