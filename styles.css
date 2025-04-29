@@ -1,0 +1,603 @@
+/* Cabeçalho */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #009744;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header .logo h1 {
+    font-size: 34px;
+    color: #333;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #000000;
+}
+
+/* .btn-contato button */
+.btn-contato button {
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 500;
+    background-color: #fffdfdcb;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+/* Estilo para o Carrossel */
+.carrossel {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.carrossel-container {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carrossel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.carrossel-item img {
+    width: 100%;
+    height: 400px; /* Altura fixa para as imagens */
+    object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
+}
+
+/* Estilo para as setas de navegação */
+.carrossel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+}
+
+.carrossel-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.anterior {
+    left: 10px;
+}
+
+.proximo {
+    right: 10px;
+}
+
+/* Estilo para os indicadores de slides */
+.carrossel-indicadores {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.indicador {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.indicador.ativo {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Botões */
+.btn, .btn-enviar, .btn-ler-mais {
+    background-color: #ff6f61;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover, .btn-enviar:hover, .btn-ler-mais:hover {
+    background-color: #e65a50;
+}
+
+/* Rodapé */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* Banner Principal */
+.banner {
+    background-image: url('laura.jpeg'); /* Coloque uma imagem de fundo aqui */
+    background-size: cover;
+    background-position: center;
+    height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #000000;
+}
+
+.banner-text h2 {
+    font-size: 58px;
+    margin-bottom: 10px;
+}
+
+.banner-text p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.banner-text .btn {
+    padding: 10px 20px;
+    background-color: #06965a;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.banner-text .btn:hover {
+    background-color: #06965a;
+}
+
+/* Seção de Produtos */
+.produtos {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.produtos h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.produtos-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Colunas responsivas */
+    gap: 20px; /* Espaçamento entre os produtos */
+    padding: 0; /* Remove o padding extra */
+}
+
+.produto {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.produto img {
+    width: 100%;
+    height: 200px; /* Altura fixa para todas as imagens */
+    object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
+}
+
+.produto h3 {
+    font-size: 20px;
+    margin: 15px 0 10px;
+}
+
+.produto p {
+    font-size: 18px;
+    color: #ff6f61;
+    margin-bottom: 15px;
+}
+
+.produto:hover {
+    transform: translateY(-10px);
+}
+
+/* Animação de fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.produto {
+    animation: fadeIn 0.5s ease;
+}
+
+/* Filtros */
+.filtros {
+    margin-bottom: 20px;
+}
+
+.filtro-btn {
+    padding: 10px 20px;
+    background-color: #f4f4f4;
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.filtro-btn.ativo {
+    background-color: #ff6f61;
+    color: #fff;
+}
+
+.filtro-btn:hover {
+    background-color: #e65a50;
+    color: #fff;
+}
+
+/* Responsividade para a página de detalhes */
+@media (max-width: 768px) {
+    .detalhes-container {
+        flex-direction: column;
+    }
+
+    .produto-imagem, .produto-info {
+        width: 100%;
+    }
+}
+
+/* Seção Sobre Nós */
+.sobre {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.sobre h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.sobre-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+}
+
+.sobre-texto {
+    flex: 1;
+    text-align: left;
+}
+
+.sobre-texto p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.sobre-imagem {
+    flex: 1;
+}
+
+.sobre-imagem img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Responsividade para a seção Sobre */
+@media (max-width: 768px) {
+    .sobre-container {
+        flex-direction: column;
+    }
+
+    .sobre-texto, .sobre-imagem {
+        width: 100%;
+    }
+}
+
+/* Estilo do botão do WhatsApp flutuante */
+.btn-whatsapp {
+    position: fixed; /* Fixa o botão na tela */
+    bottom: 20px; /* Distância do botão em relação ao fundo */
+    right: 20px; /* Distância do botão em relação à direita */
+    background-color: #25D366; /* Cor do WhatsApp */
+    border-radius: 50%; /* Transforma o botão em uma bolinha */
+    width: 60px; /* Largura da bolinha */
+    height: 60px; /* Altura da bolinha */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para efeito flutuante */
+    z-index: 1000; /* Garante que o botão fique acima de outros elementos */
+    transition: background-color 0.3s ease; /* Transição suave ao passar o mouse */
+}
+
+.btn-whatsapp img {
+    width: 30px; /* Tamanho do ícone do WhatsApp */
+    height: 30px;
+}
+
+.btn-whatsapp:hover {
+    background-color: #128C7E; /* Cor mais escura ao passar o mouse */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra maior ao passar o mouse */
+}
+
+/* Estilo para a seção da Galeria */
+.galeria {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.galeria h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.galeria-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Colunas responsivas */
+    gap: 20px; /* Espaçamento entre as imagens */
+    padding: 0 20px;
+}
+
+.galeria-item {
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    aspect-ratio: 1 / 1; /* Mantém a proporção quadrada */
+}
+
+.galeria-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que a imagem cubra o espaço sem distorcer */
+    transition: transform 0.3s ease;
+}
+
+.galeria-item img:hover {
+    transform: scale(1.1); /* Efeito de zoom ao passar o mouse */
+}
+
+.galeria-item::after {
+    content: "Ver Mais";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.galeria-item:hover::after {
+    opacity: 1;
+}
+
+/* Responsividade Geral */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .banner-text h2 {
+        font-size: 36px;
+    }
+
+    .banner-text p {
+        font-size: 16px;
+    }
+
+    .produtos-container, .blog-container {
+        flex-direction: column;
+    }
+
+    .produto, .post {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner-text h2 {
+        font-size: 28px;
+    }
+
+    .banner-text p {
+        font-size: 14px;
+    }
+}
+
+/* Estilo para a página de detalhes do produto */
+.detalhes-produto {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.detalhes-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.produto-imagem {
+    flex: 1;
+}
+
+.produto-imagem img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.produto-info {
+    flex: 1;
+    text-align: left;
+}
+
+.produto-info h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.produto-info .preco {
+    font-size: 24px;
+    color: #ff6f61;
+    margin-bottom: 20px;
+}
+
+.produto-info .descricao {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.tamanhos {
+    margin-bottom: 20px;
+}
+
+.tamanhos label {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.tamanhos select {
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.btn-comprar {
+    padding: 10px 20px;
+    background-color: #ff6f61;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-comprar:hover {
+    background-color: #e65a50;
+}
+
+/* Estilo para o Carrinho de Compras */
+.carrinho {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.carrinho-container {
+    display: flex;
+    gap: 20px;
+}
+
+.carrinho-itens {
+    flex: 2;
+}
+
+.carrinho-resumo {
+    flex: 1;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.carrinho-resumo h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.carrinho-resumo p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.btn-finalizar {
+    padding: 10px 20px;
+    background-color: #ff6f61;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.btn-finalizar:hover {
+    background-color: #e65a50;
+}
+
+/* Responsividade para o carrinho */
+@media (max-width: 768px) {
+    .carrinho-container {
+        flex-direction: column;
+    }
+}
+
+.carrinho-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.carrinho-link:hover {
+    color: #ff6f61;
+}
+
+#carrinho-contador {
+    margin-left: 5px;
+    background-color: #ff6f61;
+    color: #fff;
+    padding: 2px 8px;
+    border-radius: 50%;
+    font-size: 14px;
+}
